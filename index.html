@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusAuth Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h2>NexusAuth Pro</h2>
+    <span>Secure Authentication System</span>
+  </header>
+
+  <main>
+
+    <!-- LOGIN -->
+    <section id="loginSection" class="panel">
+
+      <div class="left">
+        <h1>Welcome</h1>
+        <p>Login or create account</p>
+      </div>
+
+      <div class="right">
+
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password (min 6 chars)">
+
+        <button onclick="signUp()">Create Account</button>
+        <button onclick="signIn()">Sign In</button>
+        <button class="google" onclick="googleLogin()">Google Login</button>
+
+        <p id="message"></p>
+
+        <button class="link" onclick="resetPassword()">Forgot Password?</button>
+
+      </div>
+
+    </section>
+
+    <!-- DASHBOARD -->
+    <section id="dashboard" class="panel hidden">
+
+      <div class="left">
+        <h1>Dashboard</h1>
+        <p>Secure Area</p>
+      </div>
+
+      <div class="right">
+
+        <p id="userInfo"></p>
+        <p id="tokenInfo"></p>
+
+        <button onclick="logout()">Logout</button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
